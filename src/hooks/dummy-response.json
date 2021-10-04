@@ -1,0 +1,152 @@
+{
+    "name": "emily",
+    "version": "1.0.0",
+    "description": "Emily CLI tool",
+    "opts": [],
+    "args": [],
+    "subCommands": [
+        {
+            "name": "telemetry",
+            "description": "Control whether or not to send anonymous usage data to the Emily team (on|off)",
+            "opts": [
+                {
+                    "name": [
+                        "-h",
+                        "--help"
+                    ],
+                    "description": "Display help for command",
+                    "args": []
+                },
+                {
+                    "name": [
+                        "-s",
+                        "--silent"
+                    ],
+                    "description": "Should Emily execute silently",
+                    "args": [],
+                    "defaultValue": false
+                },
+                {
+                    "name": [
+                        "-vb",
+                        "--verbose"
+                    ],
+                    "description": "Print detailed information while running commands",
+                    "args": []
+                }
+            ],
+            "args": [
+                {
+                    "name": "status",
+                    "required": false
+                }
+            ],
+            "subCommands": []
+        },
+        {
+            "name": "open",
+            "description": "Open a folder or existing Emily project",
+            "opts": [
+                {
+                    "name": [
+                        "-h",
+                        "--help"
+                    ],
+                    "description": "Display help for command",
+                    "args": []
+                },
+                {
+                    "name": [
+                        "-i",
+                        "--import-only"
+                    ],
+                    "description": "Import the folder without opening project",
+                    "args": [],
+                    "defaultValue": false
+                },
+                {
+                    "name": [
+                        "-im",
+                        "--image"
+                    ],
+                    "description": "The Emily image to use when importing a project (slim | pytorch | tensorflow)",
+                    "args": [
+                        {
+                            "name": "image",
+                            "required": true
+                        }
+                    ],
+                    "defaultValue": "slim"
+                },
+                {
+                    "name": [
+                        "-e",
+                        "--editor"
+                    ],
+                    "description": "The editor to use (pycharm | vscode | notebook | lab)",
+                    "args": [
+                        {
+                            "name": "editor",
+                            "required": true
+                        }
+                    ]
+                },
+                {
+                    "name": [
+                        "-g",
+                        "--gpu"
+                    ],
+                    "description": "Enable/disable GPU support",
+                    "negatable": true,
+                    "args": []
+                },
+                {
+                    "name": [
+                        "-s",
+                        "--silent"
+                    ],
+                    "description": "Should Emily execute silently",
+                    "args": [],
+                    "defaultValue": false
+                },
+                {
+                    "name": [
+                        "-vb",
+                        "--verbose"
+                    ],
+                    "description": "Print detailed information while running commands",
+                    "args": []
+                }
+            ],
+            "args": [
+                {
+                    "name": "project",
+                    "description": "Emily project ID, project name, or project path"
+                }
+            ],
+            "subCommands": [],
+            "sections": [
+                {
+                    "type": "title",
+                    "content": "Example 1"
+                },
+                {
+                    "type": "body",
+                    "content": "To open an existing Emily project, you have to supply either the project's ID, name or path.  You can  then choose to enable / disable GPU and choose your preferred editor."
+                },
+                {
+                    "type": "code",
+                    "content": "$ emily open MKLHWX\n\n$ emily open my-project-name\n\n$ emily open ~/Projects/my-project-directory\n\n$ emily open MKLHWX --gpu --editor vscode"
+                },
+                {
+                    "type": "body",
+                    "content": "You can also import a directory, which is not an Emily project. You will be able to choose an import image that suits your project the most. If you want to import someone else's Emily project, which contains mounted volumes, you can provide your source mount paths using the --import-mounts flag."
+                },
+                {
+                    "type": "body",
+                    "content": "$ emily open ./my-directory\n\n$ emily open ./my-directory --import-mounts ./dataset1 ./dataset2 ./dataset3 --editor pycharm --gpu"
+                }
+            ]
+        }
+    ]
+}
