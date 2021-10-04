@@ -43,10 +43,11 @@ const fetcher = async (url: string, payload: string)  => {
   }
 }
 
-const apiBaseUrl = process.env.NODE_ENV === 'development' ? 
-  'https://emily-services-dev.westeurope.cloudapp.azure.com/documentation/v1' : 
-  'https://emily-extra-service.com/v1'
+// const apiBaseUrl = process.env.NODE_ENV === 'development' ? 
+//   'https://emily-services-dev.westeurope.cloudapp.azure.com/documentation/v1' : 
+//   'https://emily-extra-service.com/v1'
 
+const apiBaseUrl = 'https://emily-services-dev.westeurope.cloudapp.azure.com/documentation/v1'
 
 export const useCachedRequest = <T>(url: string) => useSWR<T, HttpException>(url, fetcher)
 export const useVersions = () => useCachedRequest<any>(`${apiBaseUrl}/versions`)
