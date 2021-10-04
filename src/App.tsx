@@ -18,7 +18,7 @@ import { HR1 } from './components/line-break/line-break';
 import ReactMarkdown from 'react-markdown';
 import { BranchInput } from './components/git-object-selection/branch-input';
 import { GitObjectSelectionDev, GitObjectSelection } from './components/git-object-selection/git-object-selection';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 
 const App = () => {
 
