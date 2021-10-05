@@ -12,6 +12,7 @@ export const ReleaseSelector = () => {
   if (!data) return renderEmptyDropdown()
 
   const dropdownItems: JSX.Element[] = getDropdownItems(data, site)
+  const latest: string = data[-1] || site.state.version
   return (
     <ReleaseSelectorStyles.ReleaseSelector>
       <style type="text/css">
@@ -43,7 +44,7 @@ export const ReleaseSelector = () => {
       </style>
       <Dropdown id="dropdown">
         <Dropdown.Toggle variant="secondary" size="lg">
-          {site.state.version}
+          {latest}
         </Dropdown.Toggle>
         <Dropdown.Menu>
           {dropdownItems}
@@ -73,6 +74,7 @@ const renderEmptyDropdown = () => {
 
 const getDropdownItems = (versions: string[], site: SiteContextProps): JSX.Element[] => {
   const items = []
+  
   for (const version of versions) {
     const item: JSX.Element = <Dropdown.Item key={version} onClick={() => clickHandler(version, site)}>{version}</Dropdown.Item>
     items.push(item)
