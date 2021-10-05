@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/emily-cli-documentation-client/static/css/main.9e6636e5.chunk.css",
-    "main.js": "/emily-cli-documentation-client/static/js/main.a4df7b3b.chunk.js",
-    "main.js.map": "/emily-cli-documentation-client/static/js/main.a4df7b3b.chunk.js.map",
+    "main.js": "/emily-cli-documentation-client/static/js/main.24c6564b.chunk.js",
+    "main.js.map": "/emily-cli-documentation-client/static/js/main.24c6564b.chunk.js.map",
     "runtime-main.js": "/emily-cli-documentation-client/static/js/runtime-main.b4f1b8a3.js",
     "runtime-main.js.map": "/emily-cli-documentation-client/static/js/runtime-main.b4f1b8a3.js.map",
     "static/css/2.8d6134b0.chunk.css": "/emily-cli-documentation-client/static/css/2.8d6134b0.chunk.css",
@@ -21,6 +21,6 @@
     "static/css/2.8d6134b0.chunk.css",
     "static/js/2.ab8edc64.chunk.js",
     "static/css/main.9e6636e5.chunk.css",
-    "static/js/main.a4df7b3b.chunk.js"
+    "static/js/main.24c6564b.chunk.js"
   ]
 }
